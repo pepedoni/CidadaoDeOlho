@@ -8,11 +8,11 @@ sobre qual a rede social de maior impacto para divulgação dos dados.
 PHP >= 7.2
 Composer = 1.9.0
 Servidor MySql com os seguintes dados 
-    - IP: 127.0.0.1
-    - Porta:  3306
-    - Usuario: root
-    - Senha: 
-    - DBName: cidadaoDeOlho
+- IP: 127.0.0.1
+- Porta:  3306
+- Usuario: root
+- Senha: 
+- DBName: cidadaoDeOlho
 
 Obs.: Caso deseje alterar os dados do banco a configuração deve ser modificada no arquivo .env na raiz do diretorio
 
@@ -26,7 +26,7 @@ php artisan serve
 
 ## Ferramentas Utilizadas
 
-    - [Laravel](laravel.com) 
-    - Vue
-    - Vuetify
-    - MySql
+- [Laravel](http://laravel.com) 
+- Vue
+- Vuetify
+- MySql
