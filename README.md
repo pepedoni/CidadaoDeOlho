@@ -26,7 +26,7 @@ php artisan serve
 
 ## Ferramentas Utilizadas
 
-    - [laravel.com]Laravel 
+    - [Laravel](laravel.com) 
     - Vue
     - Vuetify
     - MySql
