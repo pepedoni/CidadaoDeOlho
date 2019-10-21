@@ -4,6 +4,10 @@ Essa aplicação foi criada no intuito de disponibilizar uma ferramenta para os 
 sobre os gastos com verbas indenizatórias dos deputados do seu estado. Além disso, a aplicação disponibiliza um estudo
 sobre qual a rede social de maior impacto para divulgação dos dados.
 
+## Organização de Código e Objetivo
+
+O código foi feito utilizando o modelo MVC e a organizações de pastas do laravel. Nesse sentido, as views desenvolvidas podem ser encontradas em resources/js/components, os Models em app e os controllers em app/Http/Controllers.
+
 ## Requisitos
 - PHP >= 7.2
 - Composer 
