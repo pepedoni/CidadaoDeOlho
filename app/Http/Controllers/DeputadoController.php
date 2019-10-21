@@ -31,6 +31,7 @@ class DeputadoController extends Controller
     * @param $mes - Mês a ser filtrado
     **/
     public function getDeputadosOrdenadosPorVerba(Request $request, $mes) {
+        $page = 1;
         if($request->has('page')) {
             $page = $request->input('page');
         }
@@ -44,6 +45,7 @@ class DeputadoController extends Controller
     * @param Illuminate\Http\Request Request - Requisição 
     **/
     public function getRedesSociaisMaisUtilizadas(Request $request) {
+        $page = 1;
         if($request->has('page')) {
             $page = $request->input('page');
         }

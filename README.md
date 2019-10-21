@@ -34,8 +34,9 @@ Obs.: Caso deseje alterar os dados do banco a configuração deve ser modificada
 
 ## Rotas da api
 
-- GET /preencherDados => Busca os dados dos deputados e de verbas indenizatorias e preenche as tabelas do sistema
-- GET //deputados_por_verba/{mes}
+- GET /preencherDados            => Busca os dados dos deputados e de verbas indenizatorias e preenche as tabelas do sistema
+- GET /deputados_por_verba/{mes} => Retorna a lista de deputados ordenados pelo reembolso de verbas indenizatorias de maneira decrescente
+- GET /redes_sociais_mais_utilizadas => Retorna a lista de redes sociais ordenadas das mais utilizadas para as menos utilziadas
 
 ## Ferramentas Utilizadas
 

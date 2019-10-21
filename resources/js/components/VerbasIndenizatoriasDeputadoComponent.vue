@@ -65,7 +65,14 @@
     </v-data-table>
     <div class="text-xs-center footerTable">
       <v-btn @click="$router.push('/')" text dark>Voltar a Pagina Inicial</v-btn>
-    </div>
+    </div> 
+    <v-snackbar
+      v-model="snackbar"
+      :color="snackColor"
+      :timeout="2000"
+    >
+      {{ snackText }}
+    </v-snackbar>
   </div>
 </template>
 
@@ -92,6 +99,9 @@ export default {
         { text: "Valor Reembolsado", sortable: false, value: "VALOR_REEMBOLSO", align: 'right' },
       ],
       endPoint: "http://127.0.0.1:8000/api/",
+      snackbar: false,
+      snackColor: "green",
+      snackText: "Consulta Realizada com Sucesso",
       loading: true,
       monthDialog: false,
       pagination: {
@@ -141,9 +151,15 @@ export default {
         }
         return this.axios.get(this.endPoint + 'deputados_por_verba/' + this.mes + page).then(response => {
           this.loading = false;
+          this.snackText = "Consulta Realizada com Sucesso";
+          this.snackColor = "green";
+          this.snackbar = true;
           return response;
         }).catch(error => {
           this.loading = false;
+          this.snackText = "Ocorreu um erro ao comunicar com o servidor";
+          this.snackColor = "red";
+          this.snackbar = true;
         });
     },
 
@@ -166,9 +182,15 @@ export default {
       this.loading = true;
       this.axios.get(this.endPoint + 'preencherDados').then(response => {
         this.loading = false;
+        this.snackText = "Base de Dados Atualizada com Sucesso.";
+        this.snackColor = "green";
+        this.snackbar = true;
         return response;
       }).catch(error => {
         this.loading = false;
+        this.snackText = "Ocorreu um erro ao comunicar com o servidor";
+        this.snackColor = "red";
+        this.snackbar = true;
       });
     },
 

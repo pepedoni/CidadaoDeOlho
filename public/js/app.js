@@ -1911,6 +1911,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1933,11 +1940,13 @@ __webpack_require__.r(__webpack_exports__);
         rowsPerPage: 5,
         totalRedesSociais: 1
       },
+      snackbar: false,
+      snackColor: "green",
+      snackText: "Consulta Realizada com Sucesso",
       totalRedesSociais: 10
     };
   },
-  created: function created() {
-    this.getDataFromApi();
+  created: function created() {// this.getDataFromApi();
   },
   computed: {
     pages: function pages() {
@@ -1966,9 +1975,15 @@ __webpack_require__.r(__webpack_exports__);
 
       return this.axios.get(this.endPoint + 'redes_sociais_mais_utilizadas' + page).then(function (response) {
         _this.loading = false;
+        _this.snackText = "Consulta Realizada com Sucesso";
+        _this.snackColor = "green";
+        _this.snackbar = true;
         return response;
       })["catch"](function (error) {
         _this.loading = false;
+        _this.snackText = "Ocorreu um erro ao comunicar com o servidor";
+        _this.snackColor = "red";
+        _this.snackbar = true;
       });
     },
     getDataFromApi: function getDataFromApi() {
@@ -1992,9 +2007,15 @@ __webpack_require__.r(__webpack_exports__);
       this.loading = true;
       this.axios.get(this.endPoint + 'preencherDados').then(function (response) {
         _this3.loading = false;
+        _this3.snackText = "Base de Dados Atualizada com Sucesso.";
+        _this3.snackColor = "green";
+        _this3.snackbar = true;
         return response;
       })["catch"](function (error) {
         _this3.loading = false;
+        _this3.snackText = "Ocorreu um erro ao comunicar com o servidor";
+        _this3.snackColor = "red";
+        _this3.snackbar = true;
       });
     }
   }
@@ -2011,6 +2032,13 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2109,6 +2137,9 @@ __webpack_require__.r(__webpack_exports__);
         align: 'right'
       }],
       endPoint: "http://127.0.0.1:8000/api/",
+      snackbar: false,
+      snackColor: "green",
+      snackText: "Consulta Realizada com Sucesso",
       loading: true,
       monthDialog: false,
       pagination: {
@@ -2151,9 +2182,15 @@ __webpack_require__.r(__webpack_exports__);
 
       return this.axios.get(this.endPoint + 'deputados_por_verba/' + this.mes + page).then(function (response) {
         _this.loading = false;
+        _this.snackText = "Consulta Realizada com Sucesso";
+        _this.snackColor = "green";
+        _this.snackbar = true;
         return response;
       })["catch"](function (error) {
         _this.loading = false;
+        _this.snackText = "Ocorreu um erro ao comunicar com o servidor";
+        _this.snackColor = "red";
+        _this.snackbar = true;
       });
     },
     getDataFromApi: function getDataFromApi() {
@@ -2177,9 +2214,15 @@ __webpack_require__.r(__webpack_exports__);
       this.loading = true;
       this.axios.get(this.endPoint + 'preencherDados').then(function (response) {
         _this3.loading = false;
+        _this3.snackText = "Base de Dados Atualizada com Sucesso.";
+        _this3.snackColor = "green";
+        _this3.snackbar = true;
         return response;
       })["catch"](function (error) {
         _this3.loading = false;
+        _this3.snackText = "Ocorreu um erro ao comunicar com o servidor";
+        _this3.snackColor = "red";
+        _this3.snackbar = true;
       });
     },
     openMonthDialog: function openMonthDialog() {
@@ -20730,6 +20773,21 @@ var render = function() {
           )
         ],
         1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-snackbar",
+        {
+          attrs: { color: _vm.snackColor, timeout: 2000 },
+          model: {
+            value: _vm.snackbar,
+            callback: function($$v) {
+              _vm.snackbar = $$v
+            },
+            expression: "snackbar"
+          }
+        },
+        [_vm._v("\n    " + _vm._s(_vm.snackText) + "\n  ")]
       )
     ],
     1
@@ -20959,6 +21017,21 @@ var render = function() {
           )
         ],
         1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-snackbar",
+        {
+          attrs: { color: _vm.snackColor, timeout: 2000 },
+          model: {
+            value: _vm.snackbar,
+            callback: function($$v) {
+              _vm.snackbar = $$v
+            },
+            expression: "snackbar"
+          }
+        },
+        [_vm._v("\n    " + _vm._s(_vm.snackText) + "\n  ")]
       )
     ],
     1
