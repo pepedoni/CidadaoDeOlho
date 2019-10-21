@@ -6,7 +6,10 @@ sobre qual a rede social de maior impacto para divulgação dos dados.
 
 ## Organização de Código e Objetivo
 
-O código foi feito utilizando o modelo MVC e a organizações de pastas do laravel. Nesse sentido, as views desenvolvidas podem ser encontradas em resources/js/components, os Models em app e os controllers em app/Http/Controllers.
+Para atingir os desafios propostos criei um endpoint que popula o banco de dados com as informações da API buscando primeiro os deputados e posteriormente as verbas indenizatorias e as redes sociais dos mesmos. Dessa forma, esse endpoint deve ser consumido na primeira utilização da aplicação e sempre que for preciso atualizar os dados da base. Gravando os dados no banco o processo de consulta é otimizado uma vez que não é necessario consumir a API http://dadosabertos.almg.gov.br/ws/ a todo instante o que tambem evita processar
+esses dados novamente.
+
+Desse modo, o código foi feito utilizando o modelo MVC e a organizações de pastas do laravel. Nesse sentido, as views desenvolvidas podem ser encontradas em resources/js/components, os Models em app e os controllers em app/Http/Controllers.
 
 ## Requisitos
 - PHP >= 7.2
