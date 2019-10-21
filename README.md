@@ -5,15 +5,17 @@ sobre os gastos com verbas indenizatórias dos deputados do seu estado. Além di
 sobre qual a rede social de maior impacto para divulgação dos dados.
 
 ## Requisitos
-PHP >= 7.2
-Composer 
-Node
-Servidor MySql com os seguintes dados 
-- IP: 127.0.0.1
-- Porta:  3306
-- Usuario: root
-- Senha: 
-- DBName: cidadaoDeOlho
+- PHP >= 7.2
+- Composer 
+- Node
+- Servidor MySql com os seguintes dados 
+```
+IP: 127.0.0.1
+Porta:  3306
+Usuario: root
+Senha: 
+DBName: cidadaoDeOlho
+```
 
 Obs.: Caso deseje alterar os dados do banco a configuração deve ser modificada no arquivo .env na raiz do diretorio
 
@@ -44,7 +46,9 @@ php artisan serve
 
 ## Imagens
 ![](https://user-images.githubusercontent.com/9373165/67168946-c64ee980-f37e-11e9-87db-340c8157cf1b.jpeg)
+
 ![](https://user-images.githubusercontent.com/9373165/67168976-e9799900-f37e-11e9-9b76-f61dc176b976.jpeg)
+
 ![](https://user-images.githubusercontent.com/9373165/67168999-f6968800-f37e-11e9-9c0d-aa533695a66a.jpeg)
 
 
