@@ -21,14 +21,14 @@ Obs.: Caso deseje alterar os dados do banco a configuração deve ser modificada
 
 ## Instalação
 
-git clone https://github.com/pepedoni/CidadaoDeOlho.git
-cd CidadaoDeOlho
-composer install
-npm install
-php artisan migrate
+- git clone https://github.com/pepedoni/CidadaoDeOlho.git
+- cd CidadaoDeOlho
+- composer install
+- npm install
+- php artisan migrate
 
 ## Rodar Aplicação
-php artisan serve
+- php artisan serve
 
 ( Por padrão a aplicação é executada no endereço http://127.0.0.1:8000 )
 
